@@ -121,3 +121,26 @@ body {
     display: flex;
   }
 }
+
+/* Pantalla completa */
+@media (max-width: 768px) {
+  body {
+    padding: 0;                 /* sin marco */
+  }
+
+  .screen {
+    max-width: 100%;            /* que use todo el ancho */
+  }
+
+  .menu-card {
+    border-radius: 0;           /* opcional: sin esquinas redondeadas */
+    height: 100vh;              /* ocupa toda la altura visible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    /* centra el contenido verticalmente */
+  }
+
+  .difficulty-buttons {
+    grid-template-columns: 1fr; /* ya lo tenías aquí, lo mantenemos */
+  }
+}
