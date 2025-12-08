@@ -218,5 +218,34 @@ button {
     width: 70px;
     height: 70px;
   }
+} 
+
+/* Contenedor global escalable */
+#app-scale {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  transform-origin: top center;
 }
+
+/* Escalado automático cuando no hay altura suficiente */
+@media (max-height: 520px) {
+  #app-scale {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-height: 440px) {
+  #app-scale {
+    transform: scale(0.7);
+  }
+}
+
+@media (max-height: 360px) {
+  #app-scale {
+    transform: scale(0.6);
+  }
+}
+
+
 
