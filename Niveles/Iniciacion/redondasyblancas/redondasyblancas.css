@@ -178,3 +178,45 @@ button {
     display: none;
   }
 }
+
+/* Ajuste especial para móviles en horizontal (poca altura) */
+@media (orientation: landscape) and (max-height: 500px) {
+  body {
+    padding-top: 8px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 6px;
+  }
+
+  #game-container {
+    padding: 10px 12px;
+    max-width: 100%;
+    /* opcional: escala todo un poco para que quepa mejor */
+    transform: scale(0.9);
+    transform-origin: top center;
+  }
+
+  #hud {
+    flex-direction: row;
+    gap: 8px;
+    font-size: 0.8rem;
+  }
+
+  #controls {
+    margin-top: 8px;
+  }
+
+  #hitBtn.mobile-only {
+    margin-top: 8px;
+    width: 70px;
+    height: 70px;
+  }
+}
+
