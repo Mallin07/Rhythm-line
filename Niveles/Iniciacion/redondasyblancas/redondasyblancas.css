@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #050816;
+  color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  min-height: 100vh;
+}
+
+h1 {
+  margin-bottom: 8px;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.subtitle {
+  margin-bottom: 20px;
+  color: #aaa;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+#game-container {
+  background: #0b1020;
+  border-radius: 16px;
+  padding: 20px 24px 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  margin: 0 auto;
+
+  /* ocupa todo el ancho disponible hasta 800px */
+  width: 100%;
+  max-width: 800px;
+}
+
+canvas {
+  display: block;
+  background: #050816;
+  border-radius: 12px;
+  border: 2px solid #20264a;
+
+  /* se adapta al contenedor */
+  width: 100%;
+  height: auto;
+}
+
+
+#hud {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  font-size: 0.95rem;
+}
+
+#hud strong {
+  color: #ffdd57;
+}
+
+#feedback {
+  margin-top: 10px;
+  height: 24px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#feedback.perfect { color: #4ade80; }
+#feedback.good { color: #38bdf8; }
+#feedback.miss { color: #fb7185; }
+
+#controls {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+button {
+  margin-top: 10px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #6366f1, #ec4899);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#feedback.medal-oro {
+  color: #facc15; /* dorado */
+}
+
+#feedback.medal-plata {
+  color: #e5e7eb; /* gris clarito */
+}
+
+#feedback.medal-bronce {
+  color: #f97316; /* naranja/bronce */
+}
+
+/* Botón solo en dispositivos táctiles */
+.mobile-only {
+  display: none;
+}
+
+/* Mostrar y estilizar en móvil/tablet */
+@media (hover: none) and (pointer: coarse) {
+  #hitBtn.mobile-only {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* 👇 forma redonda */
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+
+    /* 👇 color nuevo (verde neón) */
+    background: radial-gradient(circle at top, #4ade80, #16a34a);
+    color: #052e16;
+
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+
+    border: none;
+    cursor: pointer;
+
+    /* 👇 posición a la derecha */
+    position: static;
+    margin: 16px 3cm 0 auto;
+    align-self: flex-end;
+
+    /* 👇 efecto visual tipo botón físico */
+    box-shadow:
+      0 8px 0 #15803d,
+      0 12px 20px rgba(0,0,0,0.4);
+
+    transition: transform 0.05s ease, box-shadow 0.05s ease;
+  }
+
+  /* Efecto al pulsar */
+  #hitBtn.mobile-only:active {
+    transform: translateY(4px);
+    box-shadow:
+      0 4px 0 #15803d,
+      0 6px 12px rgba(0,0,0,0.4);
+  }
+}
+
+
+/* ------------------- Ajuste responsive del juego ------------------- */
+@media (max-width: 900px) {
+  body {
+    padding-top: 20px;
+  }
+
+  #hud {
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+}
+
+/* Ocultar el texto de teclado en dispositivos táctiles */
+@media (hover: none) and (pointer: coarse) {
+  .subtitle {
+    display: none;
+  }
+}

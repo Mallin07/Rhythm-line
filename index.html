@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rhythm Line</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <!-- PANTALLA DE MENÚ -->
+  <div id="menu-screen" class="screen active">
+    <div class="menu-card">
+      <h1 class="app-title">Rhythm Line</h1>
+      <p class="app-subtitle">
+        Entrena tu lectura rítmica al ritmo del metrónomo.
+      </p>
+
+      <div class="difficulty-section">
+        <h2>Selecciona nivel</h2>
+        <div class="difficulty-buttons">
+          <!-- 👇 Ruta a tu carpeta Niveles/Iniciacion/Iniciacion.html -->
+          <button class="btn-difficulty"
+                  onclick="location.href='Niveles/Iniciacion/Iniciacion.html'">
+            Iniciación
+          </button>
+
+          <!-- Estos de momento pueden ir a páginas vacías o en construcción -->
+          <button class="btn-difficulty"
+                  onclick="location.href='Niveles/Novel/Novel.html'">
+            Novel
+          </button>
+          <button class="btn-difficulty"
+                  onclick="location.href='Niveles/Avanzado/Avanzado.html'">
+            Avanzado
+          </button>
+          <button class="btn-difficulty"
+                  onclick="location.href='Niveles/Profesional/Profesional.html'">
+            Profesional
+          </button>
+        </div>
+      </div>
+
+      <div id="rotateMsg">Gira tu dispositivo para jugar en horizontal 📱</div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

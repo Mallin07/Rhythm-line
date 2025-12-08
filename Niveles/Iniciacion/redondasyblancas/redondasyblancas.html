@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rhythm Line/title>
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="redondasyblancas.css" />
+</head>
+
+<body>
+   <button id="backBtn" class="btn-back">← Volver</button>
+  <h1>Redondas y Blancas</h1>
+  <p class="subtitle">
+    Pulsa <strong>ESPACIO</strong> cuando la figura musical pase por la barra blanca.
+  </p>
+
+  <div id="game-container">
+    <canvas id="game" width="800" height="220"></canvas>
+
+    <div id="hud">
+      <span>Puntuación: <strong id="score">0</strong></span>
+      <span>Combo: <strong id="combo">0</strong></span>
+    </div>
+
+    <div id="feedback"></div>
+
+    <div id="controls">
+      <button id="startBtn">▶ Empezar / Reiniciar</button>
+    </div>
+  </div>
+
+  <button id="hitBtn" class="mobile-only">¡Toca para golpear!</button>
+
+
+  <script src="redondasyblancas.js"></script>
+</body>
+</html>

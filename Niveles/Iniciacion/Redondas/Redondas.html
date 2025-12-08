@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mini Guitar Hero – Figuras musicales</title>
+  <link rel="stylesheet" href="Redondas.css" />
+</head>
+
+<body>
+   <button id="backBtn" class="btn-back">← Volver</button>
+  <h1>Mini Guitar Hero (1 línea)</h1>
+  <p class="subtitle">
+    Pulsa <strong>ESPACIO</strong> o <strong>J</strong> cuando la figura musical pase por la barra blanca.
+  </p>
+
+  <div id="game-container">
+    <canvas id="game" width="800" height="220"></canvas>
+
+    <div id="hud">
+      <span>Puntuación: <strong id="score">0</strong></span>
+      <span>Combo: <strong id="combo">0</strong></span>
+      <span>Estado: <strong id="state">Parado</strong></span>
+    </div>
+
+    <div id="feedback"></div>
+
+    <div id="controls">
+      <div>Patrón de figuras musicales (negras, corcheas y dobles).</div>
+      <button id="startBtn">▶ Empezar / Reiniciar</button>
+    </div>
+  </div>
+
+  <script src="Redondas.js"></script>
+</body>
+</html>

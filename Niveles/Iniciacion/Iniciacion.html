@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rhythm Line – Iniciación</title>
+  <link rel="stylesheet" href="Iniciacion.css" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <!-- PANTALLA DE INICIACIÓN -->
+  <!-- 👇 Quitamos "hidden" porque esta página es la propia pantalla -->
+  <div id="init-screen" class="screen">
+    <div class="menu-card">
+      <button id="back-to-menu" class="btn-back">← Volver</button>
+
+      <h1 class="app-title small">Iniciación</h1>
+      <p class="app-subtitle">
+        Elige un apartado para practicar las figuras y silencios básicos.
+      </p>
+
+      <div class="init-grid">
+        <!-- Apartado 1 -->
+        <div class="section-card">
+          <h2 class="section-title">Apartado 1: Figuras</h2>
+          <div class="level-buttons">
+            <button class="btn-level" data-level="redondas">Redondas</button>
+            <button class="btn-level" data-level="blancas">Blancas</button>
+            <button class="btn-level" data-level="redondasyblancas">Redondas y Blancas</button>
+            <button class="btn-level" data-level="negras">Negras</button>
+            <button class="btn-level" data-level="red-blan-negras">Redondas, Blancas y Negras</button>
+            <button class="btn-level" data-level="corcheas">Corcheas</button>
+            <button class="btn-level" data-level="todas">Todas las figuras</button>
+          </div>
+        </div>
+
+        <!-- Apartado 2 -->
+        <div class="section-card">
+          <h2 class="section-title">Apartado 2: Silencios y examen</h2>
+          <div class="level-buttons">
+            <button class="btn-level" data-level="sil-redonda">Silencio de Redonda</button>
+            <button class="btn-level" data-level="sil-blanca">Silencio de Blanca</button>
+            <button class="btn-level" data-level="sil-negra">Silencio de Negra</button>
+            <button class="btn-level" data-level="examen-principiante">Examen de Principiante</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="Iniciacion.js"></script>
+
+</body>
+</html>
