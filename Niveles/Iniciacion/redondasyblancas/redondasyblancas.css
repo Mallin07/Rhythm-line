@@ -303,7 +303,7 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;     /* centra el contenido dentro */
-    transform: none;             /* importante: anulamos el scale() */
+    transform: scale(0.95);             /* importante: anulamos el scale() */
   }
 
   #game-container {
