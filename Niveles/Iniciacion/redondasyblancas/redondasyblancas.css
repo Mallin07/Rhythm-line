@@ -181,6 +181,20 @@ button {
   }
 }
 
+/* Ocultar el botón ATRÁS en dispositivos táctiles */
+@media (hover: none) and (pointer: coarse) {
+  .btn-back {
+    display: none;
+  }
+}
+
+/* Ocultar TITULO PARTIDA en dispositivos táctiles */
+@media (hover: none) and (pointer: coarse) {
+  .h1 {
+    display: none;
+  }
+}
+
 /* Pequeños ajustes extra para horizontal con poca altura */
 @media (orientation: landscape) and (max-height: 500px) {
   body {
@@ -275,4 +289,32 @@ button {
   }
 }
 
+/* ===================== */
+/*  MÓVIL HORIZONTAL: GAME FULL HEIGHT  */
+/* ===================== */
+@media (hover: none) and (pointer: coarse) and (orientation: landscape) {
+  body {
+    padding-top: 0;              /* sin espacio arriba */
+    justify-content: center;     /* centra verticalmente todo el app-scale */
+  }
 
+  #app-scale {
+    height: 100vh;               /* ocupa todo el alto de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;     /* centra el contenido dentro */
+    transform: none;             /* importante: anulamos el scale() */
+  }
+
+  #game-container {
+    flex: 1;                     /* se estira dentro de app-scale */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* Un poco menos de margen en HUD para aprovechar altura */
+  #hud {
+    margin-top: 4px;
+  }
+}
