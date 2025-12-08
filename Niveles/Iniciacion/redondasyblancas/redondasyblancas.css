@@ -145,7 +145,7 @@ button {
 
     /* posición a la derecha */
     position: static;
-    margin: 16px 3cm 0 auto;
+    margin: 16px 1cm 0 auto;
     align-self: flex-end;
 
     /* efecto visual tipo botón físico */
@@ -202,6 +202,38 @@ button {
     width: 70px;
     height: 70px;
   }
+}
+
+/* ===================== */
+/*   Aliniación botones móvil  */
+/* ===================== */
+
+/* Fila de controles con botón central y botón a la derecha */
+.controls-row {
+  position: relative;          /* referencia para el absolute */
+  display: flex;
+  justify-content: center;     /* centra SOLO el botón empezar */
+  align-items: center;
+  margin-top: 14px;
+  width: 100%;
+}
+
+/* Botón de empezar siempre centrado */
+.controls-row #startBtn {
+  z-index: 1;                  /* queda por delante si se solapan */
+}
+
+/* Botón verde fijo a la derecha */
+.controls-row #hitBtn.mobile-only {
+  position: absolute;
+  right: 12px;                 /* separación del borde derecho */
+  top: 70%;
+  transform: translateY(-50%);
+
+  margin: 0;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
 }
 
 /* ===================== */
